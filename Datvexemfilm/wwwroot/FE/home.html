@@ -11,6 +11,7 @@
     <link rel = "stylesheet" href = "../assets/css/animation.css">
 </head>
 <body>
+    <button class="toggle-nav-btn"><i class="fas fa-bars"></i></button>
     <div class="container1">
         <!--NAVBAR -->
         <nav class="navbar">
@@ -27,12 +28,217 @@
         <!--END NAVBAR -->
         <!-- POSSTER MAIN -->
         <div class="mainposter">
+            <div class="mainposter__slide active" style="background-image: url('../assets/images/mainPoster/movie5.webp')">
+                <div class="mainposter__content">
+                    <h2>Avengers: Endgame</h2>
+                    <p>Cuộc phiêu lưu vĩ đại nhất trong lịch sử điện ảnh Marvel, nơi các siêu anh hùng phải đoàn kết một lần nữa để đối mặt với thử thách lớn nhất.</p>
+                </div>
+            </div>
+            <div class="mainposter__slide" style="background-image: url('../assets/images/mainPoster/movie6.webp')">
+                <div class="mainposter__content">
+                    <h2>Spider-Man: No Way Home</h2>
+                    <p>Peter Parker phải đối mặt với những thách thức mới khi danh tính của anh bị tiết lộ trước công chúng.</p>
+                </div>
+            </div>
+            <div class="mainposter__slide" style="background-image: url('../assets/images/mainPoster/movie7.webp')">
+                <div class="mainposter__content">
+                    <h2>The Batman</h2>
+                    <p>Khi những kẻ tội phạm bắt đầu hoành hành trên đường phố Gotham, Batman phải đối mặt với những bí ẩn đen tối của thành phố.</p>
+                </div>
+            </div>
+            <div class="mainposter__slide" style="background-image: url('../assets/images/mainPoster/movie8.webp')">
+                <div class="mainposter__content">
+                    <h2>Black Panther: Wakanda Forever</h2>
+                    <p>Wakanda phải đối mặt với những thách thức mới sau sự ra đi của vị vua T'Challa.</p>
+                </div>
+            </div>
             <div class="mainposter__button">
                 <button class="mainposter__button-left"><i class="fas fa-chevron-left"></i></button>
                 <button class="mainposter__button-right"><i class="fas fa-chevron-right"></i></button>
             </div>
+            <div class="mainposter__dots">
+                <span class="mainposter__dot active"></span>
+                <span class="mainposter__dot"></span>
+                <span class="mainposter__dot"></span>
+                <span class="mainposter__dot"></span>
+            </div>
         </div>
         <!-- END POSSTER MAIN -->
+        
+        <div class="movie-section" id="now-showing-section" style="background: transparent;">
+          <h2 class="movie-section-title"><i class="fa fa-film"></i> Phim đang chiếu</h2>
+          <div class="movie-carousel-nav-wrap">
+            <button class="movie-carousel-nav-btn left" data-target="now-showing"><i class="fas fa-chevron-left"></i></button>
+            <button class="movie-carousel-nav-btn right" data-target="now-showing"><i class="fas fa-chevron-right"></i></button>
+            <div class="movie-horizontal-list" id="now-showing">
+             
+              <div class="movie-card">
+                <img src="../assets/images/poster/movie2.jpg" alt="Phim 2">
+                <div class="movie-card-overlay">
+                  <div class="movie-info-list">
+                    <div class="movie-info-item"><i class="fa fa-film"></i> <span>Hài Hước</span></div>
+                    <div class="movie-info-item"><i class="fa fa-clock"></i> <span>105'</span></div>
+                    <div class="movie-info-item"><i class="fa fa-flag"></i> <span>Mỹ</span></div>
+                    <div class="movie-info-item"><i class="fa fa-language"></i> <span>Phụ đề</span></div>
+                  </div>
+                  <div class="movie-card-btns">
+                    <button class="btn-book">Đặt vé</button>
+                    <button class="btn-trailer">Trailer</button>
+                  </div>
+                </div>
+                <div class="movie-card-title">Cuộc Phiêu Lưu Cười Ra Nước Mắt</div>
+                <div class="movie-card-release"><i class="fa fa-calendar-alt"></i>Khởi chiếu: 15/04/2024</div>
+              </div>
+              <div class="movie-card">
+                <img src="../assets/images/poster/movie3.jpg" alt="Phim 3">
+                <div class="movie-card-overlay">
+                  <div class="movie-info-list">
+                    <div class="movie-info-item"><i class="fa fa-film"></i> <span>Kinh Dị</span></div>
+                    <div class="movie-info-item"><i class="fa fa-clock"></i> <span>98'</span></div>
+                    <div class="movie-info-item"><i class="fa fa-flag"></i> <span>Nhật Bản</span></div>
+                    <div class="movie-info-item"><i class="fa fa-language"></i> <span>Lồng tiếng</span></div>
+                  </div>
+                  <div class="movie-card-btns">
+                    <button class="btn-book">Đặt vé</button>
+                    <button class="btn-trailer">Trailer</button>
+                  </div>
+                </div>
+                <div class="movie-card-title">Bóng Ma Trong Gương</div>
+                <div class="movie-card-release">Khởi chiếu: 20/04/2024</div>
+              </div>
+              <div class="movie-card">
+                <img src="../assets/images/poster/movie4.jpg" alt="Phim 4">
+                <div class="movie-card-overlay">
+                  <div class="movie-info-list">
+                    <div class="movie-info-item"><i class="fa fa-film"></i> <span>Tình Cảm</span></div>
+                    <div class="movie-info-item"><i class="fa fa-clock"></i> <span>120'</span></div>
+                    <div class="movie-info-item"><i class="fa fa-flag"></i> <span>Việt Nam</span></div>
+                    <div class="movie-info-item"><i class="fa fa-language"></i> <span>Phụ đề</span></div>
+                  </div>
+                  <div class="movie-card-btns">
+                    <button class="btn-book">Đặt vé</button>
+                    <button class="btn-trailer">Trailer</button>
+                  </div>
+                </div>
+                <div class="movie-card-title">Chạm Vào Yêu Thương</div>
+                <div class="movie-card-release">Khởi chiếu: 22/04/2024</div>
+              </div>
+              <div class="movie-card">
+                <img src="../assets/images/poster/movie4.jpg" alt="Phim 4">
+                <div class="movie-card-overlay">
+                  <div class="movie-info-list">
+                    <div class="movie-info-item"><i class="fa fa-film"></i> <span>Tình Cảm</span></div>
+                    <div class="movie-info-item"><i class="fa fa-clock"></i> <span>120'</span></div>
+                    <div class="movie-info-item"><i class="fa fa-flag"></i> <span>Việt Nam</span></div>
+                    <div class="movie-info-item"><i class="fa fa-language"></i> <span>Phụ đề</span></div>
+                  </div>
+                  <div class="movie-card-btns">
+                    <button class="btn-book">Đặt vé</button>
+                    <button class="btn-trailer">Trailer</button>
+                  </div>
+                </div>
+                <div class="movie-card-title">Chạm Vào Yêu Thương</div>
+                <div class="movie-card-release">Khởi chiếu: 22/04/2024</div>
+              </div>
+              <div class="movie-card">
+                <img src="../assets/images/poster/movie4.jpg" alt="Phim 4">
+                <div class="movie-card-overlay">
+                  <div class="movie-info-list">
+                    <div class="movie-info-item"><i class="fa fa-film"></i> <span>Tình Cảm</span></div>
+                    <div class="movie-info-item"><i class="fa fa-clock"></i> <span>120'</span></div>
+                    <div class="movie-info-item"><i class="fa fa-flag"></i> <span>Việt Nam</span></div>
+                    <div class="movie-info-item"><i class="fa fa-language"></i> <span>Phụ đề</span></div>
+                  </div>
+                  <div class="movie-card-btns">
+                    <button class="btn-book">Đặt vé</button>
+                    <button class="btn-trailer">Trailer</button>
+                  </div>
+                </div>
+                <div class="movie-card-title">Chạm Vào Yêu Thương</div>
+                <div class="movie-card-release">Khởi chiếu: 22/04/2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-section" id="coming-soon-section" style="background: transparent;">
+          <h2 class="movie-section-title" id="coming-soon-section"><i class="fa fa-clock"></i> Phim sắp chiếu</h2>
+          <div class="movie-carousel-nav-wrap">
+            <button class="movie-carousel-nav-btn left" data-target="coming-soon"><i class="fas fa-chevron-left"></i></button>
+            <button class="movie-carousel-nav-btn right" data-target="coming-soon"><i class="fas fa-chevron-right"></i></button>
+            <div class="movie-horizontal-list" id="coming-soon">
+              <div class="movie-card">
+                <img src="../assets/images/poster/movie5.jpg" alt="Phim 5">
+                <div class="movie-card-overlay">
+                  <div class="movie-info-list">
+                    <div class="movie-info-item"><i class="fa fa-film"></i> <span>Phiêu Lưu</span></div>
+                    <div class="movie-info-item"><i class="fa fa-clock"></i> <span>110'</span></div>
+                    <div class="movie-info-item"><i class="fa fa-flag"></i> <span>Pháp</span></div>
+                    <div class="movie-info-item"><i class="fa fa-language"></i> <span>Lồng tiếng</span></div>
+                  </div>
+                  <div class="movie-card-btns">
+                    <button class="btn-book">Đặt vé</button>
+                    <button class="btn-trailer">Trailer</button>
+                  </div>
+                </div>
+                <div class="movie-card-title">The Batman</div>
+                <div class="movie-card-release">Khởi chiếu: 15/04/2024</div>
+              </div>
+              <div class="movie-card">
+                <img src="../assets/images/poster/movie7.jpg" alt="Phim 6">
+                <div class="movie-card-overlay">
+                  <div class="movie-info-list">
+                    <div class="movie-info-item"><i class="fa fa-film"></i> <span>Hoạt Hình</span></div>
+                    <div class="movie-info-item"><i class="fa fa-clock"></i> <span>95'</span></div>
+                    <div class="movie-info-item"><i class="fa fa-flag"></i> <span>Mỹ</span></div>
+                    <div class="movie-info-item"><i class="fa fa-language"></i> <span>Phụ đề</span></div>
+                  </div>
+                  <div class="movie-card-btns">
+                    <button class="btn-book">Đặt vé</button>
+                    <button class="btn-trailer">Trailer</button>
+                  </div>
+                </div>
+                <div class="movie-card-title">Spider-Man: No Way Home</div>
+                <div class="movie-card-release">Khởi chiếu: 15/04/2024</div>
+              </div>
+              <div class="movie-card">
+                <img src="../assets/images/poster/movie8.jpg" alt="Phim 7">
+                <div class="movie-card-overlay">
+                  <div class="movie-info-list">
+                    <div class="movie-info-item"><i class="fa fa-film"></i> <span>Hành Động</span></div>
+                    <div class="movie-info-item"><i class="fa fa-clock"></i> <span>102'</span></div>
+                    <div class="movie-info-item"><i class="fa fa-flag"></i> <span>Hàn Quốc</span></div>
+                    <div class="movie-info-item"><i class="fa fa-language"></i> <span>Lồng tiếng</span></div>
+                  </div>
+                  <div class="movie-card-btns">
+                    <button class="btn-book">Đặt vé</button>
+                    <button class="btn-trailer">Trailer</button>
+                  </div>
+                </div>
+                <div class="movie-card-title">Black Panther: Wakanda Forever</div>
+                <div class="movie-card-release">Khởi chiếu: 15/04/2024</div>
+              </div>
+              <div class="movie-card">
+                <img src="../assets/images/poster/movie9.jpg" alt="Phim 8">
+                <div class="movie-card-overlay">
+                  <div class="movie-info-list">
+                    <div class="movie-info-item"><i class="fa fa-film"></i> <span>Khoa Học</span></div>
+                    <div class="movie-info-item"><i class="fa fa-clock"></i> <span>130'</span></div>
+                    <div class="movie-info-item"><i class="fa fa-flag"></i> <span>Mỹ</span></div>
+                    <div class="movie-info-item"><i class="fa fa-language"></i> <span>Phụ đề</span></div>
+                  </div>
+                  <div class="movie-card-btns">
+                    <button class="btn-book">Đặt vé</button>
+                    <button class="btn-trailer">Trailer</button>
+                  </div>
+                </div>
+                <div class="movie-card-title">Avengers: Endgame</div>
+                <div class="movie-card-release">Khởi chiếu: 15/04/2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="listfilm">
             <div class="listfilm__navbar">
                 <div class="listfilm__navbar-search">
@@ -40,9 +246,20 @@
                     <input type="text" placeholder="Search Film" class="search__input">
                 </div>
                 <div class="listfilm__navbar-genre">
-                    <p class="listgenre">Thể Loại <i class="fas fa-chevron-down"></i></p>
-
-                    <div class="listfilm__navbar-genre-content">
+                    <button class="genre-btn" id="genreDropdownBtn">Thể Loại <i class="fas fa-chevron-down"></i></button>
+                    <div class="listfilm__navbar-genre-content" id="genreDropdown">
+                        <div class="genre-item">Hành Động</div>
+                        <div class="genre-item">Hài Hước</div>
+                        <div class="genre-item">Kinh Dị</div>
+                        <div class="genre-item">Tình Cảm</div>
+                        <div class="genre-item">Hoạt Hình</div>
+                        <div class="genre-item">Phiêu Lưu</div>
+                        <div class="genre-item">Khoa Học</div>
+                        <div class="genre-item">Âm Nhạc</div>
+                        <div class="genre-item">Tài Liệu</div>
+                        <div class="genre-item">Gia Đình</div>
+                        <div class="genre-item">Thể Thao</div>
+                        <div class="genre-item">Viễn Tưởng</div>
                     </div>
                 </div>
                 <div class="listfilm__navbar-btnnow">
@@ -57,6 +274,41 @@
                 <p class = "title_container">Movies</p>
                 
                 <!-- Phim se xuat hien ở đây -->
+            </div>
+        </div>
+
+
+        <!-- Thanh chi tiết đặt vé  -->
+        <div class="NavbarLeftContainer">
+            <div class="NavbarLeftContainer__header">
+                <p>Zeron</p>
+            </div>
+            <div class="NavbarLeftContainer__content">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Trang chủ</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>Thông tin cá nhân</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Lịch sử đặt vé</span>
+                </a>
+                <div class="nav-divider"></div>
+                <a href="#" class="nav-item nav-nowshowing">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Phim đang chiếu</span>
+                </a>
+                <a href="#" class="nav-item nav-comingsoon">
+                    <i class="fas fa-clock"></i>
+                    <span>Phim sắp chiếu</span>
+                </a>
+                <div class="nav-divider"></div>
+                <div class = "logout">
+                  <button class="navbar__content-btn logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> ĐĂNG XUẤT</button>
+                </div>
             </div>
         </div>
     </div>
@@ -96,6 +348,7 @@
                 <li><a class = "footercontent__QuickLink-list" href ="##">Trang Chủ</a></li>
                 <li><a class = "footercontent__QuickLink-list" href ="##">Đặt Vé</a></li>
                 <li><a class = "footercontent__QuickLink-list" href ="##">Thể Loại</a></li>
+
             </ul>
             <ul class="footercontent__SocialMedia">
                 <p class = "footercontent__header">Mạng Xã Hội</p></li>
@@ -112,10 +365,203 @@
 
     <script src ="../assets/js/tabpage.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        window.onload = function() {
+            loadfilm();
+        };
+    </script>
+    <script>
+        const navBtn = document.querySelector('.toggle-nav-btn');
+        const navBar = document.querySelector('.NavbarLeftContainer');
+        navBtn.addEventListener('click', () => {
+            navBar.classList.toggle('show');
+        });
+        document.addEventListener('click', function(e) {
+            if (!navBar.contains(e.target) && !navBtn.contains(e.target)) {
+                navBar.classList.remove('show');
+            }
+        });
+    </script>
+    <script>
+    // MainPoster slideshow functionality
+    const slides = document.querySelectorAll('.mainposter__slide');
+    const dots = document.querySelectorAll('.mainposter__dot');
+    const prevBtn = document.querySelector('.mainposter__button-left');
+    const nextBtn = document.querySelector('.mainposter__button-right');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+    function startSlideInterval() {
+        slideInterval = setInterval(nextSlide, 5500);
+    }
+    function stopSlideInterval() {
+        clearInterval(slideInterval);
+    }
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        stopSlideInterval();
+        startSlideInterval();
+    });
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        stopSlideInterval();
+        startSlideInterval();
+    });
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            stopSlideInterval();
+            startSlideInterval();
+        });
+    });
+    startSlideInterval();
+    document.querySelector('.mainposter').addEventListener('mouseenter', stopSlideInterval);
+    document.querySelector('.mainposter').addEventListener('mouseleave', startSlideInterval);
+    </script>
+    <script>
+    // Carousel scroll for movie-horizontal-list
+    function setupCarousel(carouselId, leftBtn, rightBtn) {
+      const list = document.getElementById(carouselId);
+      const btnLeft = leftBtn;
+      const btnRight = rightBtn;
+      const card = list.querySelector('.movie-card');
+      const gap = parseInt(getComputedStyle(list).gap) || 28;
+      const cardWidth = card.offsetWidth + gap;
+      function updateBtns() {
+        btnLeft.disabled = list.scrollLeft <= 0;
+        btnRight.disabled = list.scrollLeft + list.clientWidth >= list.scrollWidth - 2;
+      }
+      btnLeft.addEventListener('click', () => {
+        list.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        setTimeout(updateBtns, 400);
+      });
+      btnRight.addEventListener('click', () => {
+        list.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        setTimeout(updateBtns, 400);
+      });
+      list.addEventListener('scroll', updateBtns);
+      window.addEventListener('resize', updateBtns);
+      updateBtns();
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      setupCarousel('now-showing',
+        document.querySelector('.movie-carousel-nav-btn.left[data-target="now-showing"]'),
+        document.querySelector('.movie-carousel-nav-btn.right[data-target="now-showing"]')
+      );
+      setupCarousel('coming-soon',
+        document.querySelector('.movie-carousel-nav-btn.left[data-target="coming-soon"]'),
+        document.querySelector('.movie-carousel-nav-btn.right[data-target="coming-soon"]')
+      );
+    });
+    </script>
+    <script>
+    // Scroll to section when click button
+    const btnNow = document.querySelector('.listfilmnow');
+    const btnFuture = document.querySelector('.listfilmfulture');
+    const nowSection = document.getElementById('now-showing-section');
+    const soonSection = document.getElementById('coming-soon-section');
+    if(btnNow && nowSection) {
+      btnNow.addEventListener('click', function() {
+        nowSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    if(btnFuture && soonSection) {
+      btnFuture.addEventListener('click', function() {
+        soonSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    </script>
+    <script>
+    // Scroll to section when click sidebar nav
+    const navNow = document.querySelector('.nav-nowshowing');
+    const navSoon = document.querySelector('.nav-comingsoon');
+    if(navNow && nowSection) {
+      navNow.addEventListener('click', function(e) {
+        e.preventDefault();
+        nowSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    if(navSoon && soonSection) {
+      navSoon.addEventListener('click', function(e) {
+        e.preventDefault();
+        soonSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    </script>
+    <style>
+    .nav-item.nav-nowshowing:hover, .nav-item.nav-comingsoon:hover, .nav-item.nav-nowshowing.active, .nav-item.nav-comingsoon.active {
+      background: rgba(255,214,0,0.12);
+      color: #FFD600;
+    }
+    </style>
+    <script>
+    // Toggle dropdown thể loại
+    const genreBtn = document.getElementById('genreDropdownBtn');
+    const genreDropdown = document.getElementById('genreDropdown');
+    if(genreBtn && genreDropdown) {
+      genreBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        genreDropdown.classList.toggle('show');
+        genreBtn.classList.toggle('active');
+      });
+      document.addEventListener('click', function(e) {
+        if (!genreDropdown.contains(e.target) && !genreBtn.contains(e.target)) {
+          genreDropdown.classList.remove('show');
+          genreBtn.classList.remove('active');
+        }
+      });
+    }
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navItems = document.querySelectorAll('.NavbarLeftContainer__content .nav-item');
+      navItems.forEach(item => {
+        if (item.textContent.includes('Thông tin cá nhân')) {
+          item.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.style.opacity = 0;
+            setTimeout(() => {
+              window.location.href = 'CustomerInfor.html';
+            }, 500);
+          });
+        }
+      });
+    });
+    </script>
+    <style>
+    body {
+      transition: opacity 0.4s;
+    }
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Sự kiện cho nút Đặt vé
+      const btnBooks = document.querySelectorAll('.btn-book');
+      btnBooks.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.body.style.opacity = 0;
+          setTimeout(() => {
+            window.location.href = 'detailmovie.html';
+          }, 500);
+        });
+      });
+    });
+    </script>
 </body>
 </html>
-<script>
-    window.onload = function() {
-        loadfilm();
-    };
-</script>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Datvexemfilm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77fc347239f7e572e6b677209f3af1ca5c9eb60b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ec8d13a5e356e31c527e3d5712a383bae279972")]
 [assembly: System.Reflection.AssemblyProductAttribute("Datvexemfilm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Datvexemfilm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

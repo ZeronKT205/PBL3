@@ -35,13 +35,13 @@
             <div class="payment-ticket-box">
                 <div class="ticket-bill-title">HÓA ĐƠN THANH TOÁN</div>
                 <div class="ticket-bill-list">
-                    <div class="ticket-bill-row"><span class="bill-label">Phim:</span> <span class="bill-value">Vòng Tròn Oan Nghiệt</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Suất chiếu:</span> <span class="bill-value">22/10/2025 - 19:30</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Phòng chiếu:</span> <span class="bill-value">Rạp 3</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Ghế:</span> <span class="bill-value">D5, D6</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Số lượng vé:</span> <span class="bill-value">2</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Giá mỗi vé:</span> <span class="bill-value">100.000 VNĐ</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Tạm tính vé:</span> <span class="bill-value" id="bill-ticket-total">200.000 VNĐ</span></div>
+                    <div class="ticket-bill-row"><span class="bill-label">Phim:</span> <span class="bill-value payment-movie-name">Vòng Tròn Oan Nghiệt</span></div>
+                    <div class="ticket-bill-row"><span class="bill-label">Suất chiếu:</span> <span class="bill-value payment-date">22/10/2025</span><spann class = "bill-value payment-date">|</spann><span class = "bill-value payment-date payment-time">19:30</span></div>
+                    <div class="ticket-bill-row"><span class="bill-label">Phòng chiếu:</span> <span class="bill-value payment-cinema">Rạp 3</span></div>
+                    <div class="ticket-bill-row"><span class="bill-label">Ghế:</span> <span class="bill-value payment-seats">D5, D6</span></div>
+                    <div class="ticket-bill-row"><span class="bill-label">Số lượng vé:</span> <span class="bill-value payment-number-ticket">2</span></div>
+                    <div class="ticket-bill-row"><span class="bill-label">Giá mỗi vé:</span> <span class="bill-value payment-price-ticket">100.000 VNĐ</span></div>
+                    <div class="ticket-bill-row"><span class="bill-label">Tạm tính vé:</span> <span class="bill-value payment-total" id="bill-ticket-total">200.000 VNĐ</span></div>
                     <div class="ticket-bill-row bill-addon-title"><span class = "product-title"><i class="fa fa-utensils bill-icon"></i>Đồ ăn & Đồ uống đi kèm:</span></div>
                     <div class="ticket-bill-addon-list"></div>
                     <div class="ticket-bill-row bill-total"><span class="bill-label"><i class="fa fa-receipt bill-icon"></i>Tổng cộng:</span> <span class="bill-value" id="bill-grand-total">200.000 VNĐ</span></div>
@@ -168,102 +168,9 @@
         <div><p class = "line"></p></div>
     </div>
  </footer>
-<script>
-// Xử lý chọn sản phẩm bắp nước
-(function() {
-    const addonItems = document.querySelectorAll('.addon-item');
-    const selectedList = document.querySelector('.addon-selected-list');
-    const totalElem = document.querySelector('.payment-amount');
-    // Thêm các phần tử hóa đơn
-    const billAddonList = document.querySelector('.ticket-bill-addon-list');
-    const billGrandTotal = document.getElementById('bill-grand-total');
-    const billTicketTotal = document.getElementById('bill-ticket-total');
-    let baseTotal = 200000;
-    let selectedProducts = [];
 
-    function formatVND(val) {
-        return val.toLocaleString('vi-VN') + ' VNĐ';
-    }
-
-    function updateSelectedList() {
-        selectedList.innerHTML = '';
-        billAddonList.innerHTML = '';
-        if (selectedProducts.length > 0) {
-            selectedList.innerHTML = '<div class="addon-selected-title">Đã chọn:</div>';
-            selectedProducts.forEach(prod => {
-                // Cập nhật hóa đơn: tên món, số lượng, giá
-                const billRow = document.createElement('div');
-                billRow.className = 'ticket-bill-row bill-addon-row';
-                billRow.innerHTML = `<span class='bill-label'>${prod.name} x${prod.qty}</span> <span class='bill-value'>${formatVND(prod.price * prod.qty)}</span>`;
-                billAddonList.appendChild(billRow);
-                // Cập nhật danh sách đã chọn
-                const item = document.createElement('div');
-                item.className = 'addon-selected-item';
-                item.innerHTML = `<span>${prod.name} x${prod.qty}</span> <span class='addon-selected-price'>${formatVND(prod.price * prod.qty)}</span> <button class='addon-remove-btn styled-remove' data-name='${prod.name}'>✕</button>`;
-                selectedList.appendChild(item);
-            });
-        }
-    }
-
-    function updateTotal() {
-        let total = baseTotal;
-        selectedProducts.forEach(prod => total += prod.price * prod.qty);
-        totalElem.textContent = formatVND(total);
-        billGrandTotal.textContent = formatVND(total);
-        billTicketTotal.textContent = formatVND(baseTotal);
-    }
-
-    addonItems.forEach(item => {
-        const name = item.getAttribute('data-name');
-        const price = parseInt(item.getAttribute('data-price'));
-        const minusBtn = item.querySelector('.addon-qty-minus');
-        const plusBtn = item.querySelector('.addon-qty-plus');
-        const qtyValue = item.querySelector('.addon-qty-value');
-
-        plusBtn.addEventListener('click', function() {
-            let prod = selectedProducts.find(p => p.name === name);
-            if (!prod) {
-                prod = {name, price, qty: 1};
-                selectedProducts.push(prod);
-            } else {
-                prod.qty++;
-            }
-            qtyValue.textContent = prod.qty;
-            updateSelectedList();
-            updateTotal();
-        });
-        minusBtn.addEventListener('click', function() {
-            let prod = selectedProducts.find(p => p.name === name);
-            if (prod && prod.qty > 0) {
-                prod.qty--;
-                if (prod.qty === 0) {
-                    selectedProducts = selectedProducts.filter(p => p.name !== name);
-                }
-                qtyValue.textContent = prod.qty > 0 ? prod.qty : 0;
-                updateSelectedList();
-                updateTotal();
-            }
-        });
-    });
-
-    selectedList.addEventListener('click', function(e) {
-        if (e.target.classList.contains('addon-remove-btn')) {
-            const name = e.target.getAttribute('data-name');
-            selectedProducts = selectedProducts.filter(p => p.name !== name);
-            // Reset số lượng về 0
-            document.querySelectorAll('.addon-item').forEach(item => {
-                if (item.getAttribute('data-name') === name) {
-                    item.querySelector('.addon-qty-value').textContent = '0';
-                }
-            });
-            updateSelectedList();
-            updateTotal();
-        }
-    });
-    // Khởi tạo hóa đơn ban đầu
-    updateSelectedList();
-    updateTotal();
-})();
-</script>
+ <script src = "../assets/js/Payment.js" defer ></script>
+ <script src = "../assets/js/dataManager.js" defer ></script>
+ <script src = "../assets/js/auth.js" defer></script>
 </body>
 </html>

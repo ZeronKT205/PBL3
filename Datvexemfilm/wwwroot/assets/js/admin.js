@@ -112,15 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Add logout functionality
-document.querySelector('.logout-btn').addEventListener('click', function() {
-    if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
-        // TODO: Add your logout API call here
-        window.location.href = '../assets/FE/login.html'; // Redirect to login page
-    }
-});
-
-
 
 
 
